@@ -10,11 +10,11 @@ app.use(cors())
 // Logging
 app.use(morgan('dev'));
 app.use(bodyParser.json())
-var routerCuidadano = require('./api/usuario/routes/usuario.router')
-var routerLogin = require('./api/auth/routes/auth.router')
-var routerProductos = require('./api/productos/routes/productos.router')
-var routerCarritoCompras = require('./api/carrito_compras/routes/carrito_compras.router')
-var specs = require('./api/shared/swagger/swagger.config')
+var routerCuidadano = require('./src/usuario/routes/usuario.router')
+var routerLogin = require('./src/auth/routes/auth.router')
+var routerProductos = require('./src/productos/routes/productos.router')
+var routerCarritoCompras = require('./src/carrito_compras/routes/carrito_compras.router')
+var specs = require('./src/shared/swagger/swagger.config')
 // Conexión a la base de datos MongoDB
 mongoose.connect("mongodb+srv://prueba:12345@base.aggolec.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
