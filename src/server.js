@@ -10,7 +10,7 @@ app.use(cors())
 // Logging
 app.use(morgan('dev'));
 app.use(bodyParser.json())
-var routerCuidadano = require('./src/usuario/routes/usuario.router')
+
 var routerLogin = require('./src/auth/routes/auth.router')
 var routerProductos = require('./src/productos/routes/productos.router')
 var routerCarritoCompras = require('./src/carrito_compras/routes/carrito_compras.router')
@@ -33,7 +33,7 @@ const HOST = "localhost";
 
 app.use("/api-docs",swaggerUi.serve,swaggerUi.setup(specs));
 
-app.use('/api/usuario', routerCuidadano )
+
 app.use('/api/login', routerLogin)
 app.use('/api/productos', routerProductos)
 app.use('/api/carrito_compras', routerCarritoCompras)
